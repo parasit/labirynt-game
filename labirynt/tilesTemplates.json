@@ -1,0 +1,284 @@
+{
+    "tiles": [
+        {
+            "type": 0,
+            "id": "C1",
+            "exits": [
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C2",
+            "exits": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C3",
+            "exits": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C4",
+            "exits": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C5",
+            "exits": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C6",
+            "exits": [
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C7",
+            "exits": [
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C8",
+            "exits": [
+                true,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C9",
+            "exits": [
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C10",
+            "exits": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C11",
+            "exits": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C12",
+            "exits": [
+                false,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C13",
+            "exits": [
+                false,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 0,
+            "id": "C14",
+            "exits": [
+                false,
+                false,
+                false,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R1",
+            "exits": [
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R2",
+            "exits": [
+                true,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R3",
+            "exits": [
+                false,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R4",
+            "exits": [
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R5",
+            "exits": [
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R6",
+            "exits": [
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R7",
+            "exits": [
+                false,
+                true,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R8",
+            "exits": [
+                true,
+                false,
+                true,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R9",
+            "exits": [
+                true,
+                true,
+                false,
+                true
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R10",
+            "exits": [
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R11",
+            "exits": [
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R12",
+            "exits": [
+                false,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R13",
+            "exits": [
+                false,
+                false,
+                true,
+                false
+            ]
+        },
+        {
+            "type": 1,
+            "id": "R14",
+            "exits": [
+                false,
+                false,
+                false,
+                true
+            ]
+        }
+    ]
+}
