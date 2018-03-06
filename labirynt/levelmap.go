@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
-
-	"github.com/parasit/rpgforge"
 )
 
 type labiryntMapType struct {
@@ -66,25 +64,6 @@ func (l *labiryntMapType) AddRandomRoom(position Point2d) {
 	fmt.Println(fTiles[tNr])
 	room := TileFromTemplate(fTiles[tNr], position)
 	l.AddRoomToLabirynt(room)
-}
-
-func (l *labiryntMapType) addRandomRooms() {
-	var ok bool
-	var pos Point2d
-	for i := 0; i < 10; i++ {
-		ok = false
-		for !ok {
-			pos = Point2d{rpgforge.ThrowDices("1d10").Sum() - 5, rpgforge.ThrowDices("1d10").Sum() - 5}
-			if pos.PosX != 0 && pos.PosY != 0 {
-				ok = true
-			}
-		}
-		ok = false
-		for !ok {
-			r := InitRandomTile(pos)
-			ok = l.AddRoomToLabirynt(r)
-		}
-	}
 }
 
 func (l *labiryntMapType) IsTileLegal(room Tile) bool {
