@@ -42,7 +42,7 @@ func splitDiceString(diceString string) []string {
 }
 
 func processDiceArray(diceArray []string) DiceThrowResult {
-
+	lastModifier := "+"
 	result := DiceThrowResult{"", 0, []int{}}
 
 	for _, item := range diceArray {
@@ -50,28 +50,38 @@ func processDiceArray(diceArray []string) DiceThrowResult {
 		if strings.Index(item, "!") >= 0 {
 			exploding = 1
 		}
-		for pos, char := range item {
-			if strings.Index("dDkK", string(char)) >= 0 {
-				throw, _ := strconv.Atoi(item[0:pos])
-				sides, _ := strconv.Atoi(item[pos+1 : len(item)-exploding])
-				if throw == 0 {
-					throw = 1
-				}
-				var sResult string
-				sResult = "["
-				for x := 1; x <= throw; x++ {
-					// ToDo: Add 'exploding' implementation
-					r := diceThrow(sides)
-					result.result += r
-					sResult += fmt.Sprintf("%d", r)
-					if x < throw {
-						sResult += ", "
-					}
-				}
-				sResult += "]"
-				result.resultString += sResult
-				break
+		pos := strings.IndexAny(item, "dDkK")
+		if pos >= 0 {
+			throw, _ := strconv.Atoi(item[0:pos])
+			sides, _ := strconv.Atoi(item[pos+1 : len(item)-exploding])
+			if throw == 0 {
+				throw = 1
 			}
+			var sResult string
+			sResult = "["
+			for x := 1; x <= throw; x++ {
+				// ToDo: Add 'exploding' implementation
+				r := diceThrow(sides)
+				result.result += r
+				sResult += fmt.Sprintf("%d", r)
+				if x < throw {
+					sResult += ", "
+				}
+			}
+			sResult += "]"
+			result.resultString += sResult
+		} else if strings.IndexAny(item, modifiers) >= 0 {
+			result.resultString += item
+			lastModifier = item
+		} else {
+			value, _ := strconv.Atoi(item)
+			switch lastModifier {
+			case "+":
+				result.result += value
+			case "-":
+				result.result -= value
+			}
+			result.resultString += item
 		}
 
 	}
